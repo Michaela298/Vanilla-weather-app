@@ -15,7 +15,62 @@
   </head>
   <body>
     <div class="container">
-      <h1>Weather App</h1>
+      <div class="weather-app">
+        <form class="mb-3">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter a city.."
+                autocomplete="off"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="search"
+                class="btn btn-primary w-100"
+              />
+            </div>
+          </div>
+        </form>
+            <h1>Prague</h1>
+            <p>Monday 10:10
+              <br />
+              Sunny
+            </p>
+         <div class="row">
+           <div class="col-6">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              alt="almost sunny"
+            />
+            19 ºC | ºF
+           </div>
+            <div class="col-6">
+            <ul>
+              <li>
+                Precipitation: 0%
+              </li>
+              <li>
+                Humidity: 52%
+              </li>
+              <li>
+                Wind: 8 km/h
+              </li>
+            </ul>
+           </div>
+         </div>
+        </div>
+        <small>
+          <a
+            href="https://github.com/Michaela298/Vanilla-weather-app"
+            target="_blank"
+            >Open source code</a
+          >
+          by Michaela Šimková
+        </small>
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
