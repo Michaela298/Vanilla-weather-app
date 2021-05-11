@@ -1,7 +1,7 @@
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
+function formatDate() {
+  let now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
   if (hours < 10) {
     hours = `0${hours}`;
   }
@@ -17,7 +17,7 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
-  let day = days[date.getDay()];
+  let day = days[now.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
 
@@ -33,7 +33,7 @@ function displayTemperature(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  dateElement.innerHTML = formatDate();
 }
 
 let apiKey = "36794cb64ceccf9c27e4232061a9201a";
