@@ -10,6 +10,7 @@
       integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -36,10 +37,10 @@
             </div>
           </div>
         </form>
-            <h1>Prague</h1>
+            <h1 id="city"></h1>
             <p>Monday 10:10
               <br />
-              Sunny
+              <span id="description"></span>
             </p>
             </div>
          <div class="row">
@@ -51,20 +52,17 @@
               class="float-left"
             />
             <span class="float-left">
-            <strong>19</strong><span class="units">ºC | <a href="#">ºF</a></span> 
+            <strong id="temperature"></strong><span class="units">ºC | <a href="#">ºF</a></span> 
             </span>
             </div>
            </div>
             <div class="col-6">
             <ul>
               <li>
-                Precipitation: 0%
+                Humidity: <span id="humidity"></span>%
               </li>
               <li>
-                Humidity: 52%
-              </li>
-              <li>
-                Wind: 8 km/h
+                Wind: <span id="wind"></span> km/h
               </li>
             </ul>
            </div>
